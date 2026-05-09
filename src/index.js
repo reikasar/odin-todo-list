@@ -8,6 +8,23 @@ import { greeting4 } from "./modules/storage.js";
 import "./style.css";
 import odinImage from "./odin.jpg";
 
+// imports from todo.js
+import { Todo } from "./modules/todo.js";
+
+// imports from project.js
+import { Project } from "./modules/project.js";
+
+// imports from storage.js
+import { loadProject, getProjects, addProject } from "./modules/storage.js";
+
+loadProject();
+
+if(getProjects().length === 0) {
+    let defaultProject = new Project("Inbox", "");
+    addProject(defaultProject);
+};
+
+
 console.log(greeting);
 console.log(greeting2);
 console.log(greeting3);
