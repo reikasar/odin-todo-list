@@ -18,7 +18,6 @@ export function removeProject(id) {
    saveProject()
 }
 
-
 // gets project form project array using find
 export function getProject(id) {
    return projects.find(project => project.id === id);  
@@ -41,16 +40,3 @@ export function loadProject() {
       projects = JSON.parse(parseableProject);
    }
 }
-
-// Storing data
-localStorage.setItem('username', 'JohnDoe');
-
-// Retrieving data
-const user = localStorage.getItem('username');
-console.log(user); // "JohnDoe"
-
-// Removing specific data
-localStorage.removeItem('username');
-
-// Clearing all data
-localStorage.clear();   
